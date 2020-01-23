@@ -5,12 +5,12 @@
 
 Rails.application.routes.draw do
 
-  resources :authors, only: [:show] do
-    # nested resource for posts
-    resources :posts, only: [:show, :index]
+  resources :artists, only: [:show] do
+    # nested resource for songs
+    resources :songs, only: [:show, :index]
   end
 
-  resources :posts, only: [:index, :show, :new, :create, :edit, :update]
+  resources :songss, only: [:index, :show, :new, :create, :edit, :update]
 
-  root 'posts#index'
+  root 'songs#index'
 end
